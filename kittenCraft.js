@@ -498,7 +498,33 @@ Race.prototype.save = function (){
 }
 /**************************************************************************/
 /**************************************************************************/
+function Stars ()
+{
+	this.enabled = true;
+	this.name = 'stars'
+	this.title = 'Observe'
+}
+Stars.prototype.craft = function ()
+{
+	if (this.enabled) {
+		$("#gameLog").find("input").click();
+	}
+}
+Stars.prototype.toggle = function () {
+	this.enabled = !this.enabled	
+}
+Stars.prototype.save = function () {
+	return new SaveObj(this)
+}
+Stars.prototype.getType = function () {
+	return 'Stars';
+}
+Stars.prototype.load = function (obj) {
+	this.enabled = obj.enabled;
+}
 
+/**************************************************************************/
+/**************************************************************************/
 function Calendar (calendar)
 {
 	this.enabled = true;
@@ -578,6 +604,7 @@ KittenCraft.prototype.initResources = function (commonRes, uncommonRes)
 	this.resource.push(new Manpower(this.logger));
 	this.resource.push(new Religion(this.logger));
 	this.resource.push(new Calendar(this.game.calendar));
+	this.resource.push(new Stars());
 	this.resource.push(new Trade(this.logger));
 }
 KittenCraft.prototype.getRes = function (name)
