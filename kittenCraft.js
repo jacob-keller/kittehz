@@ -127,37 +127,6 @@ Resource.prototype.getType = function () {
 }
 /**************************************************************************/
 /**************************************************************************/
-/*
-function Transient () {
-	this.req = '';
-	this.title = '';
-	Resource.call(this);
-}
-
-Transient.inheritsFrom( Resource );
-Transient.prototype.craft = function () {}
-Transient.prototype.isUnlocked = function () {}
-Transient.prototype.init = function (data, logger) {
-	this.req = data.req;
-	this.title = data.title;
-	this.parent.init.call(this, data, logger);	
-}
-
-Transient.prototype.changeTab = function (tabName) {
-	var active = '';
-	if(tabName && !this.isTabActive(tabName)){
-		active = this.game.activeTabId;
-		this.game.activeTabId = tabName;
-		this.game.render();
-	}
-	return active;
-}
-Transient.prototype.isTabActive = function (tabName) {
-	return this.game.activeTabId == tabName;
-}
-*/
-/**************************************************************************/
-/**************************************************************************/
 function Uncommon(data, logger)
 {
 	this.init(data, logger);
