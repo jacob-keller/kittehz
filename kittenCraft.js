@@ -700,11 +700,11 @@ KittenCraft.prototype.import = function (settings)
 // Configure stuff
 Logger.init(gamePage);
 var common = [{name: 'wood',  amount: 100, 	limit: 0.8},
-			  {name: 'beam',  amount: 25, 	limit: 0.8},
-			  {name: 'slab',  amount: 25, 	limit: 0.8},
+			  {name: 'beam',  amount: 5, 	limit: 0.8},
+			  {name: 'slab',  amount: 5, 	limit: 0.8},
 			  {name: 'steel', amount: 'all',limit: 0.8},
-			  {name: 'plate', amount: 10, 	limit: 0.8}];
-var uncommon  = [{name: 'parchment',  amount: 50, 	 limit: 5000},
+			  {name: 'plate', amount: 5, 	limit: 0.8}];
+var uncommon  = [{name: 'parchment',  amount: 50, 	 limit: 250},
 				 {name: 'manuscript', amount: 'all', limit: 0},
 				 {name: 'compedium',  amount: 'all', limit: 0}
 				 ];
